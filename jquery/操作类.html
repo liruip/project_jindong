@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.in.js"></script>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background:pink;
+        }
+        .current {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box current">
+
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        // 添加类
+        // $("div").click(function(){
+        //     $(this).addClass("current");
+        // })
+        //删除类
+        // $("div").click(function(){
+        //     $(this).removeClass("current");
+        // })
+        //切换类
+        $("div").click(function(){
+            $(this).toggleClass("current")
+        })
+    })
+</script>

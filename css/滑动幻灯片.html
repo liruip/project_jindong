@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>滑动幻灯片</title>
+	<style>
+		.main{
+			position: relative;
+			height: 300px;
+			width: 500px;
+			overflow: hidden;
+		}
+		.box{
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 300px;
+			width: 2500px;
+		}
+		.box img{
+			width: 20%;
+			height: 100%;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box">
+			<img class="pic" src="img/th1.jpg" alt="">
+			<img class="pic" src="img/th2.jpg" alt="">
+			<img class="pic" src="img/th3.jpg" alt="">
+			<img class="pic" src="img/th4.jpg" alt="">
+			
+			<img class="pic" src="img/th1.jpg" alt="">
+		</div>
+	</div>
+	<input type="button" value="下一张" onclick="testf()">
+	
+</body>
+</html>
+<script>
+	var box = document.getElementsByClassName("box")[0];
+	var pic = document.getElementsByClassName("pic");
+	var count = 0;
+	
+	function testf(){
+		if( -count ==pic.length-1){
+			box.style.left = "0px";
+			count = 0;
+			animate(box,(--count)*500);
+		}else{
+			animate(box,(--count)*500);
+		}
+	}
+	
+	function animate(target,offset){
+		target.style.left = target.offsetLeft;
+		function go(){
+			target.style.left = (parseInt(target.style.left) - 20)+"px";
+			timer = setTimeout(go,16);
+			if(parseInt(target.style.left) == offset){
+				clearTimeout(timer);
+			}
+		}
+		go();
+	}
+</script>

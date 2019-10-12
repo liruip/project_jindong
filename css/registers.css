@@ -1,0 +1,147 @@
+.hearder {
+  width: 100%;
+  background: url(../img/headbg.jpg) repeat-x left bottom; }
+
+.hearder_xin {
+  line-height: 110px;
+  width: 1210px;
+  height: 110px;
+  margin: auto; }
+  .hearder_xin .hearder_logo {
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    background: blue;
+    background: url(../img/icon.png) no-repeat 0 0;
+    margin-top: 24px; }
+  .hearder_xin .hearder_titles {
+    height: 24px;
+    font-size: 24px;
+    color: #333;
+    margin-top: -4px; }
+  .hearder_xin .have-account {
+    color: #999;
+    font-size: 16px;
+    margin-top: 10px; }
+
+.container {
+  margin-top: 80px; }
+  .container .container_center {
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+    margin: auto;
+    padding-bottom: 60px; }
+  .container .progress-bar {
+    margin-right: 106px; }
+  .container .step_index {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    font-weight: 700;
+    background: #3b4;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin: 0 16px;
+    border: 2px solid transparent; }
+  .container .step_color {
+    color: #ccc;
+    background: transparent;
+    border: 2px solid #ccc; }
+  .container .step-desc {
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 10px;
+    color: #3b4; }
+
+.pro-line {
+  width: 124px;
+  height: 10px;
+  background: #0c0c0c;
+  position: absolute;
+  top: 7px;
+  left: 53px;
+  background: url(../img/reg_icon.png) no-repeat 0 -100px; }
+
+.pro-line_one {
+  position: absolute;
+  top: 7px;
+  left: 220px; }
+
+.container .progress_bar_line {
+  margin-right: 0; }
+
+.container_center .color_gray {
+  color: #ccc; }
+
+.inphoe {
+  margin: auto;
+  width: 400px;
+  height: 50px;
+  border: 1px solid #ccc; }
+  .inphoe .china {
+    font-family: "icomoon";
+    padding-left: 20px;
+    width: 87px;
+    height: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 50px;
+    border-right: 1px solid #ccc; }
+  .inphoe .jianyi {
+    display: block;
+    border: 1px solid red;
+    margin-top: 14px;
+    padding-left: 10px;
+    border-color: transparent;
+    background: transparent; }
+
+.anniu {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  margin-bottom: 40px; }
+
+.inphoe_color {
+  color: #fff;
+  background: #bd0202;
+  border: 0; }
+
+.gongsi {
+  width: 400px;
+  height: 50px;
+  margin: 20px auto; }
+  .gongsi .qiye {
+    width: 150px;
+    height: 50px;
+    line-height: 40px; }
+    .gongsi .qiye .icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: #111111;
+      background: url(../img/reg_icon.png) no-repeat 11px -153px; }
+  .gongsi .haiwei {
+    height: 50px;
+    line-height: 40px;
+    width: 130px;
+    height: 50px; }
+    .gongsi .haiwei .icon_haiwei {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url(../img/reg_icon.png) no-repeat -33px -151px; }
+
+.footer_bottom {
+  margin-top: 200px;
+  border-top: 1px solid #ccc; }
+  .footer_bottom .lianjie_p {
+    line-height: 100px;
+    text-align: center; }
+  .footer_bottom .mi {
+    text-align: center; }

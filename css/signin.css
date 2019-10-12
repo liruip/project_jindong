@@ -1,146 +1,142 @@
 .header {
-    position: relative;
-}
+  position: relative; }
+
 /* .header .logo{
     margin-left: 30px;
 } */
 .logo a {
-    display:block;
-    width: 170px;
-    height: 60px;
-    background: url(../img/logo_si.png) no-repeat;
-    font-size: 0;
-}
+  display: block;
+  width: 170px;
+  height: 60px;
+  background: url(../img/logo_si.png) no-repeat;
+  font-size: 0; }
+
 .signin {
-    position:absolute;
-    left: 200px;
-    top: 20px;
-    width: 110px;
-    height: 40px;
-    text-align: text;
-    line-height: 40px;
-    color: rgb(129, 129, 129);
-    font-size: 24px;
-}
-.examine  span {
-    font-family: "icomoon";
-    vertical-align: middle;
-    font-size: 18px;
-    color: red;
-}
+  position: absolute;
+  left: 200px;
+  top: 20px;
+  width: 110px;
+  height: 40px;
+  text-align: text;
+  line-height: 40px;
+  color: #818181;
+  font-size: 24px; }
+
+.examine span {
+  font-family: "icomoon";
+  vertical-align: middle;
+  font-size: 18px;
+  color: red; }
+
 .examine {
-    color: #ccc;
-    margin:50px 10px 0 0;
-}
+  color: #ccc;
+  margin: 50px 10px 0 0; }
+
 .wangluo {
-    line-height: 40px;
-    text-align: center;
-    color: #ccc;
-    background: #fff8f0;
-}
-.wangluo a{
-    color: #ccc;
-}
+  line-height: 40px;
+  text-align: center;
+  color: #ccc;
+  background: #fff8f0; }
+
+.wangluo a {
+  color: #ccc; }
+
 .wangluo a:hover {
-    color: rgb(163, 162, 162);
-    text-decoration: underline;
-}
+  color: #a3a2a2;
+  text-decoration: underline; }
+
 .wangluo i,
 .img_denglv i {
-    font-family: "icomoon";
-    vertical-align: middle;
-    font-size: 18px;
-    color: #ccc;
-}
+  font-family: "icomoon";
+  vertical-align: middle;
+  font-size: 18px;
+  color: #ccc; }
+
 /* baaner */
 .banner {
-    height:475px;
-    background:red;
-  
-}
+  height: 475px;
+  background: red; }
+
 .img_right {
-    text-align:center;
-    width: 990px;
-    height:475px;
-    background: url(../upload/baner.png)0px 0px no-repeat; 
-}
+  text-align: center;
+  width: 990px;
+  height: 475px;
+  background: url(../upload/baner.png) 0px 0px no-repeat; }
+
 .img_denglv {
-    width: 380px;
-    height: 420px;
-    margin: 40px 0;
-    background:pink;
-}
+  width: 380px;
+  height: 420px;
+  margin: 40px 0;
+  background: pink; }
+
 .img_denglv p {
-    line-height: 40px;
-    color: #ccc;
-    background: #fff8f0;
-}
+  line-height: 40px;
+  color: #ccc;
+  background: #fff8f0; }
+
 .shaoma {
-    width: 190px;
-    height: 55px;
-    font-size: 18px;
-    background: #fff;
-    line-height: 55px;
-    /* border-right: 1px solid #ccc; */
-}
-.erweima img{
-    margin: 25px 0 18px 0;
-}
+  width: 190px;
+  height: 55px;
+  font-size: 18px;
+  background: #fff;
+  line-height: 55px;
+  /* border-right: 1px solid #ccc; */ }
+
+.erweima img {
+  margin: 25px 0 18px 0; }
+
 .weight {
-    font-weight:normal;
-}
+  font-weight: normal; }
+
 .list {
-    height: 40px;
-    padding-left: 75px;
-    line-height: 40px;
-    text-align: center;
-    background:rgb(39, 38, 38);
-}
+  height: 40px;
+  padding-left: 75px;
+  line-height: 40px;
+  text-align: center;
+  background: #272626; }
 
 .mianshuru li {
-    margin-left: 20px;
-    float: left;
-    /* margin: 20px 10px 0 0; */
-}
-.mianshuru b {
-    display:inline-block;
-    vertical-align: middle;
-    width:25px;
-    height: 25px;
-    background-image:url(../img/qr-coagent.png);
-    /* background:pink; */
-}
-.one {
-    background-position: 0 25px;
-}
-.two {
-    background-position: -27px 25px;
-}
-.three {
-    background-position: -27px 25px;
-}
-.bottom {
-    height: 55px;
-    line-height: 55px;
-    background: yellow;
-}
-.bottom b{
-    display:inline-block;
-    vertical-align: middle;
-    width: 25px;
-    height: 25px;
-    background: blue;
-}
-.bottom li {
-    float: left;
-    width: 90px;
-    height: 34px;
-    margin-right: 10px;
-}
-.qq_ico {
-    margin-left: 20px;
-}
-.list_right {
-   margin-right: 0;
-}
+  margin-left: 20px;
+  float: left;
+  /* margin: 20px 10px 0 0; */ }
 
+.mianshuru b {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/qr-coagent.png);
+  /* background:pink; */ }
+
+.one {
+  background-position: 0 25px; }
+
+.two {
+  background-position: -27px 25px; }
+
+.three {
+  background-position: -27px 25px; }
+
+.bottom {
+  height: 55px;
+  line-height: 55px;
+  background: yellow; }
+
+.bottom b {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  background: blue; }
+
+.bottom li {
+  float: left;
+  width: 90px;
+  height: 34px;
+  margin-right: 10px; }
+
+.qq_ico {
+  margin-left: 20px; }
+
+.list_right {
+  margin-right: 0; }

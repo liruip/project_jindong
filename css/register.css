@@ -2,12 +2,31 @@
   width: 1200px;
   margin: 0 auto; }
 
-.header {
-  height: 82px;
-  border-bottom: 2px solid red; }
+.hearder {
+  width: 100%;
+  background: url(../img/headbg.jpg) repeat-x left bottom; }
 
-.logo {
-  padding-top: 10px; }
+.hearder_xin {
+  line-height: 110px;
+  width: 1210px;
+  height: 110px;
+  margin: auto; }
+  .hearder_xin .hearder_logo {
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    background: blue;
+    background: url(../img/icon.png) no-repeat 0 0;
+    margin-top: 24px; }
+  .hearder_xin .hearder_titles {
+    height: 24px;
+    font-size: 24px;
+    color: #333;
+    margin-top: -4px; }
+  .hearder_xin .have-account {
+    color: #999;
+    font-size: 16px;
+    margin-top: 10px; }
 
 /* registerarea */
 .registerarea {
@@ -32,7 +51,7 @@
   color: red; }
 
 .reg_form {
-  width: 600px;
+  width: 520px;
   height: 400px;
   margin: 40px auto 0; }
 
@@ -70,7 +89,7 @@
   margin-left: 10px; }
 
 .success_ico {
-  background: url(../img/succrss_ico.jpg) no-repeat; }
+  background: url(../img/icon.png) no-repeat 3px -115px; }
 
 .safe {
   padding-left: 200px; }
@@ -103,6 +122,8 @@
   width: 200px;
   height: 34px;
   border: 0;
+  line-height: 34px;
+  text-align: center;
   background: red;
   color: #fff;
   margin: 10px 0 0 130px; }

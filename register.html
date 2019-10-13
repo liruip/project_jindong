@@ -9,45 +9,55 @@
     <link rel="stylesheet" href="css/base.css">
     <!-- 引入css样式 -->
     <link rel="stylesheet" href="css/register.css">
+    <!-- 引入js -->
+    <script src="js/reg.js"></script>
 </head>
 <body>
     <div class="w">
-        <!-- header -->
-        <div class="header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="">
-                </a>
+        <!-- header  -->
+        <div class="hearder">
+            <div class="hearder_xin w">
+                <a href="#" class="hearder_logo fl"></a>
             </div>
         </div>
+        <!-- header end -->
         <div class="registerarea">
             <h3>
                 新用户注册
                 <em>我有账号 <a href="index.html">去登陆</a></em>
             </h3>
             <div class="reg_form">
-               <form action="">
+               <!-- <form action="get_post.php" > -->
                     <ul>
                     <li>
                         <label for="iph">手机号：</label>
-                        <input type="text" class="inp" id="iph">
+                        <input type="text" class="inp" id="iph" name="num">
                         <span class="error">
-                        <i class="error_ico"></i>
-                        手机好号不正确，请重新输入
+                        <i class=""></i>
+                        <!-- 手机好号不正确，请重新输入 -->
                         </span>
-                       
-                        
                     </li>
                     <li>
-                        <label for="dx">短息验证码：</label>
+                        <label for="iph">QQ：</label>
+                        <input type="text" class="inp" id="qq" name="userqq">
+                        <span></span>
+                    </li>
+                    <li>
+                        <label for="iph">昵称：</label>
+                        <input type="text" class="inp" id="nc">
+                        <span></span>
+                    </li>
+                    <li>
+                        <label for="dx">短信验证码：</label>
                         <input type="text" class="inp" id="dx"> 
+                        <span></span>
                     </li>
                     <li>
                         <label for="dl">登录密码：</label>
-                        <input type="text" class="inp" id="dl">
-                        <span class="success">
-                        <i class="success_ico"></i>
-                        恭喜你输入正确
+                        <input type="text" class="inp" id="dl" name="userpass">
+                        <span class="">
+                        <!-- <i class="success_ico"></i>
+                        恭喜你输入正确 -->
                         </span>
                     </li>
                     <li class="safe">
@@ -59,9 +69,9 @@
                     <li>
                         <label for="cf">重复登录密码：</label>
                         <input type="text" class="inp" id="cf">
-                        <span class="success">
-                        <i class="success_ico"></i>
-                        恭喜你输入正确
+                        <span class="">
+                        <!-- <i class="success_ico"></i>
+                        恭喜你输入正确 -->
                         </span>
                     </li>
                     <li class="agree">
@@ -69,10 +79,11 @@
                         <a href="#">《用户协议》</a>
                     </li>
                     <li>
-                        <input type="submit" value="完成注册" class="over">
+                        <input type="button" value="完成注册" class="over" id="btn">
+                        <span></span>
                     </li>
                 </ul>
-               </form>
+               <!-- </form> -->
             </div>
         </div>
     </div>
@@ -88,3 +99,4 @@
     </div>
 </body>
 </html>
+

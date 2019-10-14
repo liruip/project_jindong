@@ -1,0 +1,100 @@
+.w {
+    width: 990px;
+}
+.shouye {
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+    font-family: 'icomoon';
+    margin-bottom: 20px;
+}
+.header_s {
+    height: 87px;
+    padding-top: 10px;
+    margin-top: 15px;
+    background: #fff;
+    .header_logo {
+        width: 277px;
+        height: 50px;
+        margin-top: 15px;
+
+    }
+    .logo_img {
+        display: inline-block;
+        width: 134px;
+        height: 42px;
+        line-height: 70px;
+        background: url(../img/jdlogo-201708-@2x.png) no-repeat;
+    }
+    .logo_shopping {
+        display: inline-block;
+        width: 100px;
+        height: 36px;
+        background: red;
+        background: url(../img/cart-icon.png) no-repeat;
+    }
+    .header_input {
+        width: 335px;
+        height: 28px;
+        background: rgb(197, 19, 49);
+        margin-top: 25px;
+        border: 2px solid red;
+        .input_zixin {
+            width: 285px;
+            height: 24px;
+        }
+        .header_btn {
+            width: 46px;
+            height: 28px;
+            background:red;
+            color:#ccc;
+            font-weight: 700;
+            border: none;
+        }
+    }
+}
+.shopping_center {
+    height: 400px;
+    // background:pink;
+    .shopping_title {
+        height: 37px;
+        line-height: 37px;
+        font-weight: 700;
+       em {
+        font-size: 20px;
+       }
+       a {
+           color:#E2231A;
+       }
+       .number {
+           color: #ccc;
+           font-size: 14px;
+       }
+    }
+    .cart-store {
+        width: 200px;
+        height: 26px;
+        margin-top: 10px;
+        line-height: 26px;
+    }
+    .xiangxi {
+
+        width: 144px;
+        height: 23px;
+        border: 1px solid #ccc;
+        color: #666;
+        font-size: 12px;
+        font-weight:0;
+        padding-left: 2px;
+        .xingxi_ico {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            font-family: 'icomoon';
+        }
+        .label {
+            display:inline-block;
+            margin-left: 50px;
+        }
+    }
+}

@@ -31,7 +31,7 @@
                     <ul>
                     <li>
                         <label for="iph">手机号：</label>
-                        <input type="text" class="inp" id="iph" name="num">
+                        <input type="text" class="inp" id="iph" name="username">
                         <span class="error">
                         <i class=""></i>
                         <!-- 手机好号不正确，请重新输入 -->
@@ -44,7 +44,7 @@
                     </li>
                     <li>
                         <label for="iph">昵称：</label>
-                        <input type="text" class="inp" id="nc">
+                        <input type="text" class="inp" id="nc" name="username">
                         <span></span>
                     </li>
                     <li>
@@ -54,11 +54,12 @@
                     </li>
                     <li>
                         <label for="dl">登录密码：</label>
-                        <input type="text" class="inp" id="dl" name="userpass">
+                        <input type="password" class="inp" id="dl" name="userpass">
                         <span class="">
                         <!-- <i class="success_ico"></i>
                         恭喜你输入正确 -->
                         </span>
+                        <span></span>
                     </li>
                     <li class="safe">
                         安全程度
@@ -68,7 +69,7 @@
                     </li>
                     <li>
                         <label for="cf">重复登录密码：</label>
-                        <input type="text" class="inp" id="cf">
+                        <input type="password" class="inp" id="cf">
                         <span class="">
                         <!-- <i class="success_ico"></i>
                         恭喜你输入正确 -->
@@ -79,8 +80,8 @@
                         <a href="#">《用户协议》</a>
                     </li>
                     <li>
-                        <input type="button" value="完成注册" class="over" id="btn">
-                        <span></span>
+                        <input type="button" value="完成注册" class="over" id="btn" >
+                        <span id="sp"></span>
                     </li>
                 </ul>
                <!-- </form> -->
@@ -99,4 +100,36 @@
     </div>
 </body>
 </html>
+
+<script>
+    var uservalue = document.querySelector("#nc");
+    var userps = document.querySelector(".inp");
+    var btn = document.querySelector("#btn");
+    var sp = document.querySelector("#sp")
+    btn.addEventListener("click", function(){
+        //创建对象
+        var request = new XMLHttpRequest();
+        //设置请求参数
+        request.open("post", "get_post.php", true);
+        //设置回调函数
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                if (request.responseText == "-1") {
+                    sp.innerHTML = "用户名已被注册请重新注册";
+                }else if (request.responseText == "0"){
+                    sp.innerHTML = "注册失败";
+                }else if(request.responseText == "1" ){
+                    sp.innerHTML = "注册成功";
+                }
+            }
+        }
+        //发送请求
+        //1）设置请求头
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        let sendstr = `username=${uservalue.value}&userpass=${userps.value}`;
+        request.send(sendstr);
+    });
+</script>
+
+
 

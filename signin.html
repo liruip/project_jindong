@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- 引入登录样式 -->
     <link rel="stylesheet" href="css/signin.css">
+    <!-- 引入jquery插件 -->
+    <script src="jquery.in.js"></script>
 </head>
 <body>
     <!-- header部分制作 -->
@@ -35,52 +37,86 @@
             <!-- 登录模块 -->
             <div class="img_denglv fr">
                 <p> <i></i> 京东不会以任何理由要求您转账汇款，谨防咋骗</p>
-                <div class="shaoma fl">
-                    <a href="#" class="style_red">扫码登陆</a>
-                </div>
-                <div class="shaoma fr">
-                    <a href="#">账户登录</a>
-                </div>
-                <div class="erweima">
-                    <a href="#" class="erweima_s">
-                        <img src="upload/erwei_ma.jpg" alt="二维码">
-                    </a> 
-                    <a href="#">
-                        <img src="upload/phone-orange.png" alt="手机">
-                    </a>
-                    <h4 class="weight">打开 <a href="#" class="style_red">手机京东</a>   扫描二维码</h4>
-                    <div class="list">
-                        <ul class="mianshuru"> 
-                            <li> <b class="one"></b> 免输入</li>
-                            <li><b class="two"></b> 更快</li>
-                            <li><b class="three"></b> 更安全</li>
-                        </ul>
-                    </div>
-                    <div class="bottom">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <b class="qq_ico"></b>
-                                    <span>QQ</span>
-                                    <span> &nbsp;&nbsp;|</span>
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a href="#"><b class="wx_ico"></b>
-                                <span>微信</span>
-                                </a>
-                            </li>
-                            <li class="list_right ">
-                                <a href="#"><b class="lj_ico"></b>
-                                <span>立即注册</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+               <div class="img_denglv_header">
+                 <a href="#" class="shaoma fl">扫码登录</a>
+                <div class="border_line fl"></div>
+                 <a href="#" class="zhanghao fr">账号登录</a>
+               </div>
+               <div class="max" style="display:none">
+                   <div class="max_img fl">
+                       <img src="upload/erwei_ma.jpg" alt="">
+                   </div>
+                   <div class="max_iph fr">
+                       <img src="img/phone-orange.png" alt="">
+                   </div>
+                   <div class="xia_biao">
+                       打开
+                       <a href="#" class="tyle_red">手机京东</a>
+                       扫描二维码
+                   </div>
+                   <div class="max_bottom">
+                       <span class="max_span">
+                           <i class="max_ico mian"></i>
+                           免输入
+                       </span>
+                       <span class="max_span">
+                            <i class="max_ico kuai"></i>
+                            更快
+                        </span>
+                        <span class="max_span">
+                            <i class="max_ico anquan"></i>
+                            更快安全
+                        </span>
+                   </div>
+               </div>
+               <div class="Account_number">
+                   <form action="">
+                       <div class="user">
+                           <label for="" class="user_yonghu fl"></label>
+                           <input class="user_input fl" type="text" placeholder="邮箱/用户名/登录手机">
+                           <span class="clear_btn"></span>
+                       </div>
+                       <div class="user">
+                           <label for="" class="user_yonghu pas fl"></label>
+                           <input class="user_input fl" type="text" placeholder="密码">
+                           <span class="clear_btn"></span>
+                       </div>
+                       <span class="forget-pw-safe fr">
+                           <a href="#" class="wangji">忘记密码</a>
+                       </span>
+                       <div class="login-btn">
+                           <a href="javesript:;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                       </div>
+                   </form>
+               </div>
+               <div class="img_denglv_bottom">
+                   <div class="img_denglv_left">
+                       <a href="#" class="img_denglv_left_a fl">
+                            <i class="img_denglv_ico"></i>
+                            QQ
+                       </a>
+                       <a href="#" class="img_denglv_left_a img_denglv_weixin  fl">
+                            <i class="img_denglv_ico weixin"></i>
+                            微信
+                       </a>
+                       <a href="#" class="img_denglv_left_a zhuce fr">
+                            <i class="img_denglv_ico liji"></i>
+                            立即注册
+                       </a>
+                       
+                   </div>
+               </div>
         </div>
+    </div>
+      <!-- footer -->
+    <div class="footer">
+        <p class="links">
+                关于我们  |  联系我们  |  联系客服  |  商家入驻  |  营销中心  |  手机品优购  |  友情链接  |  销售联盟  |  品优购社区  |  品优购公益  |  English Site  |  Contact U
+        </p>
+        <p class="copyright">
+                地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn
+                京ICP备08001421号京公网安备11010800770 
+        </p>
     </div>
 </body>
 </html>

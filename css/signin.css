@@ -1,3 +1,6 @@
+.red_class {
+  color: red; }
+
 .header {
   position: relative; }
 
@@ -55,88 +58,179 @@
 /* baaner */
 .banner {
   height: 475px;
-  background: red; }
+  background: #050505; }
 
 .img_right {
   text-align: center;
   width: 990px;
   height: 475px;
-  background: url(../upload/baner.png) 0px 0px no-repeat; }
+  background: url(../upload/banner_a.jpg) 0px 0px no-repeat; }
 
 .img_denglv {
-  width: 380px;
-  height: 420px;
+  width: 346px;
   margin: 40px 0;
-  background: pink; }
+  background: #fff; }
 
 .img_denglv p {
   line-height: 40px;
   color: #ccc;
   background: #fff8f0; }
 
-.shaoma {
-  width: 190px;
-  height: 55px;
-  font-size: 18px;
+.img_denglv_header {
+  display: block;
+  width: 100%;
+  height: 54px;
   background: #fff;
-  line-height: 55px;
-  /* border-right: 1px solid #ccc; */ }
+  border-bottom: 1px solid #ccc; }
+  .img_denglv_header .shaoma {
+    display: block;
+    width: 49.5%;
+    margin: 12px auto;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    color: red; }
+  .img_denglv_header .border_line {
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 18px;
+    margin: 16px auto; }
+  .img_denglv_header .zhanghao {
+    display: block;
+    width: 49.5%;
+    margin: 12px auto;
+    font-size: 18px; }
+    .img_denglv_header .zhanghao:hover {
+      font-weight: 700;
+      color: #e4393c; }
 
-.erweima img {
-  margin: 25px 0 18px 0; }
+.max {
+  width: 316px;
+  height: 243px;
+  margin: auto;
+  margin-top: 20px; }
+  .max .max_img {
+    width: 173px;
+    height: 165px;
+    background: #412227; }
+  .max .max_iph {
+    width: 141px;
+    height: 168px;
+    margin-bottom: 15px; }
 
-.weight {
-  font-weight: normal; }
+.Account_number {
+  width: 306px;
+  height: 192px;
+  margin: 30px auto;
+  background: #fff; }
+  .Account_number .user {
+    position: relative;
+    height: 38px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; }
+    .Account_number .user .user_yonghu {
+      display: inline-block;
+      width: 39px;
+      height: 38px;
+      background: blue;
+      background: url(../img/pwd-icons-new.png) no-repeat;
+      border-right: 1px solid #ccc; }
+    .Account_number .user .user_input {
+      margin-top: 10px;
+      padding-left: 10px;
+      border: 0;
+      background: none; }
+    .Account_number .user .clear_btn {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: red;
+      position: absolute;
+      top: 12px;
+      right: 6px;
+      z-index: 20;
+      background: url(../img/pwd-icons-new.png) no-repeat -104px 0px; }
+    .Account_number .user .pas {
+      background-position: -48px 0px; }
+  .Account_number .forget-pw-safe {
+    display: inline-block; }
+    .Account_number .forget-pw-safe .wangji {
+      color: #ccc; }
+  .Account_number .login-btn {
+    width: 304px;
+    height: 33px;
+    border: 1px solid #ccc;
+    margin-top: 58px;
+    line-height: 33px;
+    background: #e4393c; }
+    .Account_number .login-btn a {
+      font-size: 20px;
+      color: #fff; }
 
-.list {
-  height: 40px;
-  padding-left: 75px;
-  line-height: 40px;
-  text-align: center;
-  background: #272626; }
+.xia_biao {
+  overflow: hidden;
+  margin: auto;
+  width: 180px;
+  height: 20px; }
+  .xia_biao a {
+    color: red; }
 
-.mianshuru li {
-  margin-left: 20px;
-  float: left;
-  /* margin: 20px 10px 0 0; */ }
-
-.mianshuru b {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25px;
+.max_bottom {
   height: 25px;
-  background-image: url(../img/qr-coagent.png);
-  /* background:pink; */ }
+  margin-top: 15px;
+  line-height: 25px; }
+  .max_bottom .max_span {
+    display: inline-block;
+    height: 25px;
+    margin-right: 10px; }
+    .max_bottom .max_span .max_ico {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: url(../img/qr-coagent.png) no-repeat; }
+    .max_bottom .max_span .mian {
+      margin-left: 20px; }
+    .max_bottom .max_span .kuai {
+      background-position: -27px 0; }
+    .max_bottom .max_span .anquan {
+      background-position: -54px 0; }
 
-.one {
-  background-position: 0 25px; }
+.img_denglv_bottom {
+  height: 26px;
+  margin-top: 10px;
+  padding: 12px 10px;
+  border-top: 1px solid #ccc; }
+  .img_denglv_bottom .img_denglv_left {
+    height: 20px; }
+    .img_denglv_bottom .img_denglv_left .img_denglv_left_a {
+      display: block;
+      border-right: 1px solid #ccc;
+      padding-right: 10px; }
+    .img_denglv_bottom .img_denglv_left .img_denglv_ico {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      background: url(../img/QQ-weixin.png) no-repeat; }
+    .img_denglv_bottom .img_denglv_left .img_denglv_weixin {
+      border-right: 0; }
+    .img_denglv_bottom .img_denglv_left .weixin {
+      background-position: -20px 2px;
+      margin-left: 5px; }
+    .img_denglv_bottom .img_denglv_left .zhuce {
+      border-right: 0;
+      padding-right: 0;
+      color: red; }
+      .img_denglv_bottom .img_denglv_left .zhuce .liji {
+        background: url(../img/pwd-icons-new.png) no-repeat -102px -74px; }
 
-.two {
-  background-position: -27px 25px; }
+.footer {
+  height: 120px;
+  text-align: center; }
 
-.three {
-  background-position: -27px 25px; }
+.links {
+  margin-top: 20px;
+  height: 30px; }
 
-.bottom {
-  height: 55px;
-  line-height: 55px;
-  background: yellow; }
-
-.bottom b {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25px;
-  height: 25px;
-  background: blue; }
-
-.bottom li {
-  float: left;
-  width: 90px;
-  height: 34px;
-  margin-right: 10px; }
-
-.qq_ico {
-  margin-left: 20px; }
-
-.list_right {
-  margin-right: 0; }
+.copyright {
+  line-height: 20px; }

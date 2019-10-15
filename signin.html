@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- 引入登录样式 -->
     <link rel="stylesheet" href="css/signin.css">
+    <script src="js/signin.js"></script>
+    <script src="js/jquery.in.js"></script>
+    
 </head>
 <body>
     <!-- header部分制作 -->
@@ -19,7 +22,7 @@
         <!-- logo -->
        <div class="logo ">
            <h1>
-               <a href="index.html" title="品优购">品优购</a>
+               <a href="index.html" title="京东">京东</a>
            </h1>
            <b class="signin fl">欢迎登陆</b>
        </div>
@@ -36,11 +39,11 @@
             <div class="img_denglv fr">
                 <p> <i></i> 京东不会以任何理由要求您转账汇款，谨防咋骗</p>
                <div class="img_denglv_header">
-                 <a href="#" class="shaoma fl">扫码登录</a>
+                 <a href="javascript:;" class="shaoma fl">扫码登录</a>
                 <div class="border_line fl"></div>
-                 <a href="#" class="zhanghao fr">账号登录</a>
+                 <a href="javascript:;" class="zhanghao fr">账号登录</a>
                </div>
-               <div class="max" style="display:none">
+               <div class="max">
                    <div class="max_img fl">
                        <img src="upload/erwei_ma.jpg" alt="">
                    </div>
@@ -67,7 +70,7 @@
                         </span>
                    </div>
                </div>
-               <div class="Account_number">
+               <div class="Account_number" style="display:none">
                    <!-- <form action=""> -->
                         <div id="messageBox" class="baocuo">
                             
@@ -75,12 +78,12 @@
                        <div class="user">
                            <label for="" class="user_yonghu fl"></label>
                            <input class="user_input fl"  id="username"  type="text" placeholder="邮箱/用户名/登录手机">
-                           <span class="clear_btn"></span>
+                           <span class="clear_btn" style="display: none"></span>
                        </div>
                        <div class="user">
                            <label for="" class="user_yonghu pas fl"></label>
                            <input class="user_input fl" id="userpass" type="password" placeholder="密码">
-                           <span class="clear_btn"></span>
+                           <span class="clear_btn pass_btn" style="display:none"></span>
                        </div>
                        <span class="forget-pw-safe fr">
                            <a href="//passport.jd.com/uc/links?tag=safe" class="wangji">忘记密码</a>
@@ -133,7 +136,7 @@
             if(xhr.readyState==4 && xhr.status==200){
 
                 if(xhr.responseText=="-1"){
-                    $("#messageBox").innerHTML = "用户名或者密码不对, 请重新输入！";
+                    $(".baocuo").innerHTML = "用户名或者密码不对, 请重新输入！";
                 }else{
                     let vipInfo = xhr.responseText;
                     addCookie("vipInfo",JSON.stringify(vipInfo),7);
@@ -148,7 +151,6 @@
         let sendstr = `username=${$("#username").value}&userpass=${$("#userpass").value}`;
         xhr.send(sendstr);
     }
-    
     function $(str){
         if(str.charAt(0)=="#"){
             return document.getElementById(str.substring(1));
@@ -158,5 +160,53 @@
             return document.getElementsByTagName(str);
         }
     }	
-    
+    var max = document.querySelector(".max");
+    var shaoma = document.querySelector(".shaoma");
+    var Account_number = document.querySelector(".Account_number");
+    var zhanghao = document.querySelector(".zhanghao");
+    shaoma.addEventListener('click', function(){
+        max.style.display = "block";
+        this.style.color = "red";
+        this.style.fontWeight = 700;
+        zhanghao.style.color = "#666";
+        zhanghao.style.fontWeight = 100;
+        Account_number.style.display = "none";
+        Account_number.style.color = "blue";
+    });
+    zhanghao.addEventListener('click', function(){
+        max.style.display = "none";
+        this.style.color = "red";
+        this.style.fontWeight = 700;
+        shaoma.style.color = "#666";
+        shaoma.style.fontWeight = 100;
+        Account_number.style.display = "block";
+    })
+    var user_input = document.querySelector(".user_input");
+    var  clear_btn = document.querySelector(".clear_btn");
+   
+    user_input.addEventListener("keyup", function(){
+        if(!(this.value =='')) {
+            clear_btn.style.display = "block";
+            clear_btn.addEventListener('click', function(){
+                user_input.value ='';
+                this.style.display = "none";
+            })
+        }else {
+            clear_btn.style.display = "none";
+        }
+    })
+    var userpass = document.querySelector("#userpass");
+    var pass_btn= document.querySelector(".pass_btn");
+    userpass.addEventListener("keyup", function(){
+        if(!(this.value == '')) {
+            pass_btn.style.display = 'block';
+            pass_btn.addEventListener('click', function(){
+                userpass.value = '';
+                this.style.display = 'none';
+            })
+        }else {
+            pass_btn.style.display = "none";
+        }
+    })
+
     </script>

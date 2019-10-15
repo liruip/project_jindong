@@ -333,14 +333,18 @@ window.addEventListener('load', function(){
         Successful.innerHTML= (JSON.parse(vipInfo)[0].username);
         touxiang_guang.innerHTML="hi~" + (JSON.parse(vipInfo)[0].username);
         touxiang_denglv_zhuce.innerHTML= ` <a href="" class="touxiang_denglv_zhuce">退出</a>`;
-       
-       
-
-        
     }
     touxiang_denglv_zhuce.addEventListener("click", function(){
         removeCookie("vipInfo");
 
-    })
+    });
+   var text = document.querySelector(".text");
+   document.addEventListener("keyup", function(e) {
+       if(e.keyCode == 83) {
+            text.focus();
+       }
+   });
 })
+
+
 

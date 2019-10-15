@@ -107,3 +107,41 @@
   color: #fff;
   line-height: 22px;
   text-align: center; }
+
+.summary_support dd {
+  line-height: 36px; }
+
+.zuxiao {
+  display: inline-block;
+  border-bottom: 1px solid #ededed;
+  background: #fff; }
+  .zuxiao .summary_promotion_ico {
+    font-family: 'icomoon'; }
+
+.choose_color dd {
+  line-height: 36px; }
+  .choose_color dd a {
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    text-align: center;
+    line-height: 41px; }
+  .choose_color dd .curren {
+    border-color: #c81623; }
+
+.choose_version dd {
+  line-height: 36px; }
+
+.choose_version {
+  margin: 10px 0; }
+
+.choose_version a {
+  display: inline-block;
+  height: 32px;
+  padding: 0 12px;
+  background-color: #f7f7f7;
+  border: 1px solid #ededed;
+  text-align: center;
+  line-height: 32px; }

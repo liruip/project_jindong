@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="css/common.css">
     <!-- 引入登录样式 -->
     <link rel="stylesheet" href="css/signin.css">
-    <!-- 引入jquery插件 -->
-    <script src="jquery.in.js"></script>
 </head>
 <body>
     <!-- header部分制作 -->
@@ -70,24 +68,27 @@
                    </div>
                </div>
                <div class="Account_number">
-                   <form action="">
+                   <!-- <form action=""> -->
+                        <div id="messageBox" class="baocuo">
+                            
+                        </div>
                        <div class="user">
                            <label for="" class="user_yonghu fl"></label>
-                           <input class="user_input fl" type="text" placeholder="邮箱/用户名/登录手机">
+                           <input class="user_input fl"  id="username"  type="text" placeholder="邮箱/用户名/登录手机">
                            <span class="clear_btn"></span>
                        </div>
                        <div class="user">
                            <label for="" class="user_yonghu pas fl"></label>
-                           <input class="user_input fl" type="text" placeholder="密码">
+                           <input class="user_input fl" id="userpass" type="password" placeholder="密码">
                            <span class="clear_btn"></span>
                        </div>
                        <span class="forget-pw-safe fr">
-                           <a href="#" class="wangji">忘记密码</a>
+                           <a href="//passport.jd.com/uc/links?tag=safe" class="wangji">忘记密码</a>
                        </span>
                        <div class="login-btn">
-                           <a href="javesript:;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                           <a href="javesript:;"  id="btnLogin">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
                        </div>
-                   </form>
+                   <!-- </form> -->
                </div>
                <div class="img_denglv_bottom">
                    <div class="img_denglv_left">
@@ -99,11 +100,10 @@
                             <i class="img_denglv_ico weixin"></i>
                             微信
                        </a>
-                       <a href="#" class="img_denglv_left_a zhuce fr">
+                       <a href="register.html" class="img_denglv_left_a zhuce fr">
                             <i class="img_denglv_ico liji"></i>
                             立即注册
-                       </a>
-                       
+                       </a> 
                    </div>
                </div>
         </div>
@@ -120,3 +120,43 @@
     </div>
 </body>
 </html>
+<script src="js/cookieTools.js"></script>
+<script>
+
+    $("#btnLogin").onclick = function(){
+        //1、
+        let xhr = new XMLHttpRequest();
+    
+        xhr.open("post","signin.php",true);
+    
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4 && xhr.status==200){
+
+                if(xhr.responseText=="-1"){
+                    $("#messageBox").innerHTML = "用户名或者密码不对, 请重新输入！";
+                }else{
+                    let vipInfo = xhr.responseText;
+                    addCookie("vipInfo",JSON.stringify(vipInfo),7);
+                    location.href="/project_jindong/index.html";
+                }
+                console.log(xhr.responseText);
+            }
+        }
+        //post方式：设置请求头
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        //post方式：把传给服务器端数据（键值对）放在send函数的参数里。
+        let sendstr = `username=${$("#username").value}&userpass=${$("#userpass").value}`;
+        xhr.send(sendstr);
+    }
+    
+    function $(str){
+        if(str.charAt(0)=="#"){
+            return document.getElementById(str.substring(1));
+        }else if(str.charAt(0)=="."){
+            return document.getElementsByClassName(str.substring(1));
+        }else{
+            return document.getElementsByTagName(str);
+        }
+    }	
+    
+    </script>

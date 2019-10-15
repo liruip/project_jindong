@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="京东JD.COM-专业综合网上购物商城，销售超数万品牌，4020万种商品，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、旅游等13大品类。京东PLUS会员，免费体验30天！京东秉承客户为先， 100％正品行货保障，提供全国联保，机打发票，专业配送，售后服务！">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>个人注册！</title>
     <!-- 引入初始化页面 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/base.css">
     <!-- 引入css样式 -->
     <link rel="stylesheet" href="css/register.css">
@@ -24,14 +25,14 @@
         <div class="registerarea">
             <h3>
                 新用户注册
-                <em>我有账号 <a href="index.html">去登陆</a></em>
+                <em>我有账号 <a href="signin.html">去登陆</a></em>
             </h3>
             <div class="reg_form">
                <!-- <form action="get_post.php" > -->
                     <ul>
                     <li>
                         <label for="iph">手机号：</label>
-                        <input type="text" class="inp" id="iph" name="username">
+                        <input type="text" class="inp" id="iph">
                         <span class="error">
                         <i class=""></i>
                         <!-- 手机好号不正确，请重新输入 -->
@@ -39,7 +40,7 @@
                     </li>
                     <li>
                         <label for="iph">QQ：</label>
-                        <input type="text" class="inp" id="qq" name="userqq">
+                        <input type="text" class="inp" id="qq">
                         <span></span>
                     </li>
                     <li>
@@ -103,14 +104,14 @@
 
 <script>
     var uservalue = document.querySelector("#nc");
-    var userps = document.querySelector(".inp");
+    var userps = document.querySelector("#dl");
     var btn = document.querySelector("#btn");
     var sp = document.querySelector("#sp")
     btn.addEventListener("click", function(){
         //创建对象
         var request = new XMLHttpRequest();
         //设置请求参数
-        request.open("post", "get_post.php", true);
+        request.open("post", "register.php", true);
         //设置回调函数
         request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
@@ -120,6 +121,9 @@
                     sp.innerHTML = "注册失败";
                 }else if(request.responseText == "1" ){
                     sp.innerHTML = "注册成功";
+                    setTimeout(function() {
+                        location.href = '/project_jindong/signin.html'
+                    },1000);
                 }
             }
         }

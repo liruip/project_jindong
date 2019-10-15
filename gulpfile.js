@@ -44,4 +44,11 @@ gulp.task("watchall", async ()=>{
         gulp.src("fonts/**/*")
         .pipe(gulp.dest("C:\\phpStudy\\WWW\\project_jindong\\fonts"));
     });
+    //监听php
+     //监听favicon.ico
+    //监听html, 进行复制
+    gulp.watch("*.php", async ()=>{
+        gulp.src("*.php")
+        .pipe(gulp.dest("C:\\phpStudy\\WWW\\project_jindong"));
+    });
 })

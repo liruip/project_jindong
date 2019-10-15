@@ -321,5 +321,26 @@ window.addEventListener('load', function(){
         dt_arrow_r.click();
     },2000)
 })
+window.addEventListener('load', function(){
+    var denglv = document.querySelector(".denglv");
+    var touxiang_guang = document.querySelector(".touxiang_guang");
+    var Successful = document.querySelector(".Successful");
+    var touxiang_denglv_zhuce = document.querySelector(".touxiang_denglv_zhuce");
+    let vipInfo = JSON.parse(getCookie("vipInfo"));
+    // this.console.log(vipInfo)
+    if(vipInfo) {
+        denglv.innerHTML= (JSON.parse(vipInfo)[0].username);
+        Successful.innerHTML= (JSON.parse(vipInfo)[0].username);
+        touxiang_guang.innerHTML="hi~" + (JSON.parse(vipInfo)[0].username);
+        touxiang_denglv_zhuce.innerHTML= ` <a href="" class="touxiang_denglv_zhuce">退出</a>`;
+       
+       
 
+        
+    }
+    touxiang_denglv_zhuce.addEventListener("click", function(){
+        removeCookie("vipInfo");
+
+    })
+})
 

@@ -60,6 +60,62 @@
   width: 250px;
   height: 455px; }
 
+.user_inner {
+  width: 248px;
+  height: 80px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 0; }
+
+.touxiang {
+  margin-top: 4px;
+  position: relative;
+  text-align: center;
+  height: 40px; }
+  .touxiang .touxiang_img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: orange;
+    position: absolute;
+    top: 0;
+    left: 56px; }
+  .touxiang .user_show {
+    display: inline-block;
+    height: 40px;
+    margin-right: -40px; }
+  .touxiang .touxiang_guang {
+    display: block; }
+
+.touxiang_denglv {
+  display: block;
+  height: 22px; }
+
+.xinren {
+  margin-top: 10px;
+  margin-left: 5px; }
+
+.xinren_fuli {
+  display: inline-block;
+  width: 70px;
+  height: 25px;
+  background: pink;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 13px;
+  background: #e1251b;
+  color: #fff;
+  margin-left: -18px; }
+  .xinren_fuli:hover {
+    color: #fff; }
+
+.xinren_plues {
+  background: #363634;
+  color: #e5d790;
+  margin-left: 10px; }
+  .xinren_plues:hover {
+    color: #e5d790; }
+
 .news {
   height: 163px;
   border: 1px solid #ccc; }

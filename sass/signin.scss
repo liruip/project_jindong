@@ -58,14 +58,14 @@
 /* baaner */
 .banner {
     height:475px;
-    background:rgb(5, 5, 5);
+    background: #e93854;
   
 }
 .img_right {
     text-align:center;
     width: 990px;
     height:475px;
-    background: url(../upload/banner_a.jpg)0px 0px no-repeat; 
+    background: url(../upload/baner.png)0px 0px no-repeat; 
 }
 .img_denglv {
     width: 346px;
@@ -130,8 +130,15 @@
 .Account_number {
     width: 306px;
     height: 192px;
-    margin:30px auto;
+    margin:20px auto;
     background:#fff;
+    margin-bottom: 40px;
+    .baocuo {
+        text-align: left;
+        height: 14px;
+        line-height: 14px;
+        margin-bottom: 4px;
+    }
     .user {
         position: relative;
         height: 38px;

@@ -127,7 +127,7 @@
 <script>
 
     $("#btnLogin").onclick = function(){
-        //1、
+        //1、 
         let xhr = new XMLHttpRequest();
     
         xhr.open("post","signin.php",true);
@@ -136,7 +136,7 @@
             if(xhr.readyState==4 && xhr.status==200){
 
                 if(xhr.responseText=="-1"){
-                    $(".baocuo").innerHTML = "用户名或者密码不对, 请重新输入！";
+                    $("#messageBox").innerHTML = "用户名或者密码不对, 请重新输入！";
                 }else{
                     let vipInfo = xhr.responseText;
                     addCookie("vipInfo",JSON.stringify(vipInfo),7);

@@ -346,5 +346,69 @@ window.addEventListener('load', function(){
    });
 })
 
+window.addEventListener("load",function(){
+    $.ajax({
+        "type": "post",
+        "url": "bb.php",
+        "data": "",
+        "async": true,
+        "datatype": "json",
+        // "beforeSend":function(){
+        //     loadDiv.show();
+        // },
+        "success": showGoods,
+        // "complete": function(){
+        //     loadDiv.hide();
+        // }
+    })
+function showGoods(response){
+    let productObj = $(".countdown_img")[0];
+    // $(productObj).find(".product_img img")[0].src = JSON.parse(response)[0].goodsImgSrc;
+    let htmlStr = "";
+    for(let i = 0 ; i < 8 ; i++){
+        let productJson = JSON.parse(response)[i];
+        htmlStr += `
+            <div class="countdown_img">
+                <img src="${productJson.goodsType}" alt="">
+            </div>
+        `;
+        // $(".showBox")[0].innerHTML = htmlStr;
+    }
+    $(".showBox").html(htmlStr);
+}
 
+})
+//获取后端数据
+window.addEventListener("load",function(){
+    $.ajax({
+        "type": "post",
+        "url": "index.php",
+        "data": "",
+        "async": true,
+        "datatype": "json",
+        // "beforeSend":function(){
+        //     loadDiv.show();
+        // },
+        "success": showGoods,
+        // "complete": function(){
+        //     loadDiv.hide();
+        // }
+    })
+    function showGoods(response){
+        // let productObj = $(".countdown_img")[0];
+        // let productJson = JSON.parse(response)[0];
+        // $(productObj).find(".product_img img")[0].src = JSON.parse(response)[0].goodsImgSrc;
+        let htmlStr = "";
+        for(let i = 0 ; i < 1 ; i++){
+            let productJson = JSON.parse(response)[i];
+            console.log(productJson.goodsType);
+            htmlStr += `
+                    <img src="${productJson.goodsType}" alt="">
+            `;
+        }
+        $(".countdown_img")[0].innerHTML = htmlStr;
+            // $(".showBox").html(htmlStr);
+    }
+
+})
 

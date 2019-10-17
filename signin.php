@@ -42,7 +42,8 @@
     mysql_select_db("myshuju",$conn);
     $sqlstr = "select * from vip where username='$username' and userpass='$userpass' ";
     $result = mysql_query($sqlstr,$conn);
-    if($result){
+    $rows_s = mysql_num_rows($result);//获得结果的行数
+    if($rows_s){
         while($row = mysql_fetch_array($result)){
             $vipInfo = new vipInfo();
             $vipInfo->username = $row["username"];

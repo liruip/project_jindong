@@ -74,10 +74,12 @@
     border: 1px solid #ccc;
     margin-left: 10px;
 }
+//错误的
 .error {
     color: #df3033;
     margin-left: 10px;
 }
+// 错误的
 .error_ico,
 .success_ico {
     display: inline-block;
@@ -98,6 +100,7 @@
     width: 50px;
     height: 20px;
 }
+// 正确的
 .success_ico {
     background: url(../img/icon.png) no-repeat 3px -115px;
 }

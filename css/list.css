@@ -7,6 +7,107 @@
   height: 32px;
   border-left: 1px solid red; }
 
+.sk_dow {
+  height: 60px; }
+  .sk_dow .timeline_item {
+    width: 350px;
+    height: 60px; }
+    .sk_dow .timeline_item .timeline_item_link {
+      position: relative;
+      display: block;
+      width: 350px;
+      height: 60px; }
+      .sk_dow .timeline_item .timeline_item_link:before {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 60px 60px;
+        border-color: transparent transparent #fc0101;
+        position: absolute;
+        left: 0;
+        top: 0;
+        zoom: 1; }
+      .sk_dow .timeline_item .timeline_item_link:after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 61px 61px 0 0;
+        border-color: #fc0303 transparent transparent;
+        position: absolute;
+        left: 290px;
+        top: 0;
+        zoom: 1; }
+  .sk_dow .dangshi {
+    width: 160px;
+    height: 44px;
+    padding-left: 20px;
+    font-weight: 700;
+    padding-top: 16px;
+    position: relative;
+    margin-right: 40px; }
+    .sk_dow .dangshi .dangshi_time {
+      font-weight: 700;
+      color: #141414; }
+    .sk_dow .dangshi .back {
+      width: 400px;
+      height: 44px;
+      background: #bb1d1d; }
+    .sk_dow .dangshi .qiagngou {
+      display: inline-block;
+      width: 78px;
+      height: 28px;
+      border: 1px solid #ccc;
+      margin-left: 10px;
+      line-height: 28px;
+      text-align: center;
+      border-radius: 16px;
+      font-weight: 0;
+      color: #ccc; }
+  .sk_dow .last_z {
+    margin-right: 0; }
+  .sk_dow .skew_timewrap {
+    width: 230px;
+    height: 60px;
+    content: "";
+    color: #fff;
+    background: #ff0b0b;
+    margin-left: 60px; }
+    .sk_dow .skew_timewrap .time1 {
+      width: 65px;
+      height: 60px;
+      display: inline-block;
+      margin-left: 10px;
+      line-height: 60px;
+      text-align: right;
+      font-size: 18px;
+      font-weight: 700;
+      overflow: hidden; }
+    .sk_dow .skew_timewrap .timeline_timecount {
+      display: inline-block;
+      height: 60px;
+      margin-left: 5px;
+      overflow: hidden; }
+      .sk_dow .skew_timewrap .timeline_timecount .timeline_timecount_txt {
+        display: block;
+        margin-top: 15px;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff;
+        font-size: 14px; }
+      .sk_dow .skew_timewrap .timeline_timecount .timeline_timecount_time {
+        display: block;
+        margin-top: 8px;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff;
+        font-size: 14px;
+        overflow: hidden;
+        display: inline-block; }
+
 .sk_list li {
   float: left;
   line-height: 45px;

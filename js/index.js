@@ -115,10 +115,10 @@ window.addEventListener('load', function(){
     var floot = document.querySelector(".floot");
     var heaer_max = document.querySelector(".heaer_max");
     var floot_top = floot.offsetTop;
-    console.log(floot_top)
+    // console.log(floot_top)
 
     document.addEventListener('scroll', function(){
-        console.log(window.pageYOffset);
+        // console.log(window.pageYOffset);
         if(window.pageYOffset >= floot_top) {
             fiexdtool_right.style.position = "fixed";
             fiexdtool_right.style.top = '100px';

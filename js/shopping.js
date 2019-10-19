@@ -4,7 +4,7 @@ $(function(){
         $(".wuping, .quanxuan").prop("checked", $(this).prop("checked"));
     })
     $(".wuping").change(function(){
-        console.log($(".wuping:checked").length);
+        // console.log($(".wuping:checked").length);
         // console.log( $(".wuping").length);
         // $(".wuping").length) 所有复选框的个数
         if($(".wuping:checked").length ===  $(".wuping").length) {
@@ -15,7 +15,6 @@ $(function(){
         }
     });
     // 增减商品数量模块
-    //增
     $(".decrement_right").click(function(){
         //得到当前兄弟文本的值 
         var n = $(this).siblings(".itxt").val();
@@ -82,6 +81,8 @@ $(function(){
        })
        $('.sumPrice em').text("¥" + money.toFixed(2));
     }
+  var num =   $(".wuping").length
+  $(".number").html(num);
   
 })
 
@@ -110,12 +111,38 @@ window.addEventListener("load",function(){
         for(let i = 0 ; i < 1 ; i++){
             let productJson = JSON.parse(response)[i];
             console.log(productJson.image);
+            console.log(productJson.center)
             htmlStr += `
                     <img src="${productJson.image}" alt="">
+                    <a href="#" class="p-goods_text">
+                        ${productJson.center}
+                    </a>
             `;
         }
-        $(".p-goods_img")[0].innerHTML = htmlStr;
+        $(".p-goods")[0].innerHTML = htmlStr;
             $(".showBox").html(htmlStr);
     }
+})
+
+window.addEventListener('load', function(){
+    var footer = document.querySelector(".footer");
+    var options_box = document.querySelector(".options-box");
+    var last = document.querySelector(".last");
+    // var last_top = last.offsetTop;
+    // console.log(last_top);
+
+    document.addEventListener('scroll', function(){
+        // console.log(window.pageYOffset);
+        if(window.pageYOffset > 360) {
+            options_box.className = "options-box w";
+            options_box.style.position = "relative"
+            options_box.style.width = "998" + "px";
+        }else {
+            options_box.className = "options-box";
+            options_box.style.position = "fixed";
+            options_box.style.width = "100" + "%";
+        }
+    })
+    
 })
 

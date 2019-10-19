@@ -329,9 +329,14 @@
 
 .options-box {
   height: 50px;
+  width: 100%;
   background: #fdfdfd;
   margin-top: 20px;
-  border: 1px solid #ccc; }
+  box-shadow: 0 -1px 8px rgba(0, 1, 1, 0.08);
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: fixed;
+  bottom: 0px; }
   .options-box .select-all {
     width: 54px;
     height: 18px;

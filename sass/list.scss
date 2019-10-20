@@ -9,7 +9,11 @@
 
 .sk_dow {
     height:60px;
+    width: 1200px;
+    margin-bottom: 10px;
     // background: rgb(250, 96, 96);
+    position: relative;
+    z-index: 2;
     .timeline_item {
         width: 350px;
         height: 60px;
@@ -31,7 +35,6 @@
                 left: 0;
                 top: 0;
                 zoom: 1;
-               
              }
              &:after {
                 display:block;
@@ -57,15 +60,31 @@
         font-weight: 700;
         padding-top: 16px;
         position: relative;
-        margin-right: 40px;
+        padding-right: 32.5px;
+        background: rgb(248, 247, 247);
+        &:before {
+            display: block;
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 60px 60px;
+            border-color: transparent transparent  rgb(248, 247, 247);
+            position: absolute;
+            left: -59px;
+            top: 0;
+            zoom: 1;
+         }
         .dangshi_time {
             font-weight: 700;
             color: rgb(20, 20, 20);
+          
         }
         .back {
             width: 400px;
             height: 44px;
             background: rgb(187, 29, 29);
+          
         }
         .qiagngou {
             display:inline-block;

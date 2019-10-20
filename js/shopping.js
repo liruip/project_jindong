@@ -2,6 +2,11 @@ $(function(){
     $(".quanxuan").change(function(){
         // console.log($(this).prop("checked"));
         $(".wuping, .quanxuan").prop("checked", $(this).prop("checked"));
+        if($(this).prop("checked")) {
+            $(".item-give").addClass("check_cart_item");
+        }else {
+            $(".item-give").removeClass("check_cart_item");
+        }
     })
     $(".wuping").change(function(){
         // console.log($(".wuping:checked").length);
@@ -12,6 +17,11 @@ $(function(){
             $(".quanxuan").prop("checked", true);
         }else {
             $(" .quanxuan").prop("checked", false);
+        }
+        if($(this).prop("checked")) {
+            $(this).parents(".item-give").addClass("check_cart_item");
+        }else {
+            $(this).parents(".item-give").removeClass("check_cart_item");
         }
     });
     // 增减商品数量模块
@@ -83,9 +93,52 @@ $(function(){
     }
   var num =   $(".wuping").length
   $(".number").html(num);
+   // 删除模块
+    // 删除当前
+    $(".p-ops .cart-remove").click(function(){
+        $(this).parents(".item-give").remove();
+        var num =   $(".wuping").length
+        $(".number").html(num);
+        Total();
+    });
+    // 删除被选中的
+    $(".remove-batch").click(function(){
+        $(".wuping:checked").parents(".item-give").remove();
+        var num =   $(".wuping").length
+        $(".number").html(num);
+        Total();
+    });
+    //清除空购物车
+    $(".J_clr_all").click(function(){
+        $(".item-give").remove();
+        var num =   $(".wuping").length
+        $(".number").html(num);
+        Total();
+    })
   
 })
 
+window.addEventListener('load', function(){
+    var footer = document.querySelector(".footer");
+    var options_box = document.querySelector(".options-box");
+    var last = document.querySelector(".last");
+    // var last_top = last.offsetTop;
+    // console.log(last_top);
+
+    document.addEventListener('scroll', function(){
+        // console.log(window.pageYOffset);
+        if(window.pageYOffset > 360) {
+            options_box.className = "options-box w";
+            options_box.style.position = "relative"
+            options_box.style.width = "998" + "px";
+        }else {
+            options_box.className = "options-box";
+            options_box.style.position = "fixed";
+            options_box.style.width = "100" + "%";
+        }
+    })
+   
+})
 //获取后端数据
 //获取后端数据
 window.addEventListener("load",function(){
@@ -123,26 +176,3 @@ window.addEventListener("load",function(){
             $(".showBox").html(htmlStr);
     }
 })
-
-window.addEventListener('load', function(){
-    var footer = document.querySelector(".footer");
-    var options_box = document.querySelector(".options-box");
-    var last = document.querySelector(".last");
-    // var last_top = last.offsetTop;
-    // console.log(last_top);
-
-    document.addEventListener('scroll', function(){
-        // console.log(window.pageYOffset);
-        if(window.pageYOffset > 360) {
-            options_box.className = "options-box w";
-            options_box.style.position = "relative"
-            options_box.style.width = "998" + "px";
-        }else {
-            options_box.className = "options-box";
-            options_box.style.position = "fixed";
-            options_box.style.width = "100" + "%";
-        }
-    })
-    
-})
-
